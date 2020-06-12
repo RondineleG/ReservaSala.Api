@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservaSala.Api", "src\ReservaSala.Api\ReservaSala.Api.csproj", "{0A4F03CC-14D6-48E6-B2EC-50D640B29D50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A4F03CC-14D6-48E6-B2EC-50D640B29D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4F03CC-14D6-48E6-B2EC-50D640B29D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4F03CC-14D6-48E6-B2EC-50D640B29D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4F03CC-14D6-48E6-B2EC-50D640B29D50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEFF0CBC-0742-46AE-A745-7144CD5896E6}
+	EndGlobalSection
+EndGlobal
