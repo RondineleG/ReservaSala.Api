@@ -13,5 +13,5 @@ RUN dotnet publish --no-restore -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-#ENTRYPOINT ["dotnet", "ReservaSala.App.dll"]
+#ENTRYPOINT ["dotnet", "ReservaSala.Api.dll"]
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet ReservaSala.Api.dll
