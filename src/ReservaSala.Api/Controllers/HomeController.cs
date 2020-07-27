@@ -9,7 +9,7 @@ namespace ReservaSala.Api.Controllers
     {
         public string Index()
         {
-            return "API Running...";
+            return "Api Running...";
         }
     }
 }
