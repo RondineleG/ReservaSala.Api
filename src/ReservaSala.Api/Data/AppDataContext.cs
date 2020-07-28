@@ -13,6 +13,13 @@ namespace ReservaSala.Api.Data
         public DbSet<Bloco> Bloco { get; set; }
         public DbSet<Reserva> Reserva { get; set; }
 
+        public  DbSet<Recipe> Recipe { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+             
+        }
+
         public AppDataContext(DbContextOptions<AppDataContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
