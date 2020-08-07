@@ -26,6 +26,8 @@
   <ItemGroup>
     <Reference Include="EmployeeApp.Shared">
       <HintPath>..\..\..\..\..\Music\EmployeeApp\src\EmployeeApp.Shared\bin\Debug\netcoreapp3.1\EmployeeApp.Shared.dll</HintPath>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <Private>true</Private>
     </Reference>
   </ItemGroup>
 
