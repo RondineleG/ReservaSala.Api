@@ -10,6 +10,7 @@ using ReservaSala.Api.Data;
 using ReservaSala.Api.Domain.Repositories;
 using ReservaSala.Api.Domain.Services;
 using ReservaSala.Api.Extensions;
+using ReservaSala.Api.Models;
 using ReservaSala.Api.Persistence.Repositories;
 using ReservaSala.Api.Repositories;
 using ReservaSala.Api.Services;
@@ -32,13 +33,16 @@ namespace ReservaSala.Api
             services.ConfigureCors();
             services.ConfigureIISIntegration();
 
-            services.AddControllers();
-            services.AddDbContext<AppDataContext>(options =>
+            services.AddControllersWithViews();
+            services.AddDbContext<AppDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
@@ -73,7 +77,9 @@ namespace ReservaSala.Api
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Start}/{action=Index}/{id?}");
             });
         }
     }

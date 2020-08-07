@@ -12,9 +12,9 @@ namespace ReservaSala.Api.Controllers
     [ApiController]
     public class SalaController : ControllerBase
     {
-        private readonly AppDataContext _context;
+        private readonly AppDbContext _context;
 
-        public SalaController(AppDataContext context)
+        public SalaController(AppDbContext context)
         {
             _context = context;
         }

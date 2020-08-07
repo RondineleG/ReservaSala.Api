@@ -12,9 +12,9 @@ namespace ReservaSala.Api.Controllers
     [ApiController]
     public class BlocoController : ControllerBase
     {
-        private readonly AppDataContext _context;
+        private readonly AppDbContext _context;
 
-        public BlocoController(AppDataContext context)
+        public BlocoController(AppDbContext context)
         {
             _context = context;
         }

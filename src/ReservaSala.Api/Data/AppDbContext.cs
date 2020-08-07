@@ -1,11 +1,15 @@
+using EmployeeApp.Shared;
 using Microsoft.EntityFrameworkCore;
 using ReservaSala.Api.Domain.Models;
 using ReservaSala.Api.Models;
 
 namespace ReservaSala.Api.Data
 {
-    public class AppDataContext : DbContext
+    public class AppDbContext : DbContext
     {
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Aluno> Aluno { get; set; }
@@ -20,7 +24,7 @@ namespace ReservaSala.Api.Data
              
         }
 
-        public AppDataContext(DbContextOptions<AppDataContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -9,7 +9,7 @@ using ReservaSala.Api.Data;
 
 namespace ReservaSala.Api.Data.Migrations
 {
-    [DbContext(typeof(AppDataContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20200728015718_AddRecipe")]
     partial class AddRecipe
     {

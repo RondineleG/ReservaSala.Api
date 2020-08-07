@@ -7,7 +7,7 @@ using System;
 
 namespace ReservaSala.Api.Data.Migrations
 {
-    [DbContext(typeof(AppDataContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20200727210418_InitialCreate")]
     partial class InitialCreate
     {

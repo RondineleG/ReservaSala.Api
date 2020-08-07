@@ -23,5 +23,11 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="EmployeeApp.Shared">
+      <HintPath>..\..\..\..\..\Music\EmployeeApp\src\EmployeeApp.Shared\bin\Debug\netcoreapp3.1\EmployeeApp.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 
 </Project>

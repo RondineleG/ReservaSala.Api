@@ -2,14 +2,11 @@
 
 namespace ReservaSala.Api.Controllers
 {
-
-    [Route("api/[controller]")]
-    [ApiController]
-    public class HomeController : ControllerBase
+    public class HomeController : Controller
     {
         public string Index()
         {
-            return "Api Running...";
+            return "API Running...";
         }
     }
 }

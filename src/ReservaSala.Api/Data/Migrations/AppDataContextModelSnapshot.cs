@@ -8,7 +8,7 @@ using ReservaSala.Api.Data;
 
 namespace ReservaSala.Api.Data.Migrations
 {
-    [DbContext(typeof(AppDataContext))]
+    [DbContext(typeof(AppDbContext))]
     partial class AppDataContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

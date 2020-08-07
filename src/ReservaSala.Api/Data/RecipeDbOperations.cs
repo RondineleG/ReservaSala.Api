@@ -8,7 +8,7 @@ namespace ReservaSala.Api.Data
 {
     public class RecipeDbOperations
     {
-        AppDataContext rc;
+        AppDbContext rc;
 
         //To Get all recipes   
         public IEnumerable<Recipe> GetAllRecipes()

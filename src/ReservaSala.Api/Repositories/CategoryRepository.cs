@@ -9,7 +9,7 @@ namespace ReservaSala.Api.Repositories
 {
     public class CategoryRepository : BaseRepository, ICategoryRepository
     {
-        public CategoryRepository(AppDataContext context) : base(context) { }
+        public CategoryRepository(AppDbContext context) : base(context) { }
 
         public async Task<IEnumerable<Category>> ListAsync()
         {

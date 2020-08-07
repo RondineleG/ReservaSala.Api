@@ -12,9 +12,9 @@ namespace ReservaSala.Api.Controllers
     [ApiController]
     public class AlunoController : ControllerBase
     {
-        private readonly AppDataContext _context;
+        private readonly AppDbContext _context;
 
-        public AlunoController(AppDataContext context)
+        public AlunoController(AppDbContext context)
         {
             _context = context;
         }

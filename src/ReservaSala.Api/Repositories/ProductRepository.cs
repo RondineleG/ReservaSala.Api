@@ -10,7 +10,7 @@ namespace ReservaSala.Api.Persistence.Repositories
 {
     public class ProductRepository : BaseRepository, IProductRepository
     {
-        public ProductRepository(AppDataContext context) : base(context) { }
+        public ProductRepository(AppDbContext context) : base(context) { }
 
         public async Task<IEnumerable<Product>> ListAsync()
         {

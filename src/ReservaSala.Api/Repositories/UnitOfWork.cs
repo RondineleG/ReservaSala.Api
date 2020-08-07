@@ -6,9 +6,9 @@ namespace ReservaSala.Api.Persistence.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly AppDataContext _context;
+        private readonly AppDbContext _context;
 
-        public UnitOfWork(AppDataContext context)
+        public UnitOfWork(AppDbContext context)
         {
             _context = context;     
         }

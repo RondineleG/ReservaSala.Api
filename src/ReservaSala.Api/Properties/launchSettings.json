@@ -11,16 +11,14 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "api/home",
+      "launchBrowser": true,      
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "ReservaSala.Api": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "api/home",
+      "launchBrowser": true,     
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
