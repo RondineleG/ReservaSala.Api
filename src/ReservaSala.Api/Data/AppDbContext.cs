@@ -1,4 +1,3 @@
-using EmployeeApp.Shared;
 using Microsoft.EntityFrameworkCore;
 using ReservaSala.Api.Domain.Models;
 using ReservaSala.Api.Models;

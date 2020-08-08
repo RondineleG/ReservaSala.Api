@@ -1,5 +1,4 @@
-﻿using EmployeeApp.Shared;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ReservaSala.Api.Models

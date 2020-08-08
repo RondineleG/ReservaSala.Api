@@ -1,7 +1,6 @@
-﻿using ReservaSala.Api.Models;
-using EmployeeApp.Shared;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ReservaSala.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
