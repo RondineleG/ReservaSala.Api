@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ReservaSala.Api.Models
 {
-    public class Aluno
+    public class Aluno : EnitityBase
     {
         public Aluno()
         {
