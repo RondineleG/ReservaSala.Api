@@ -1,4 +1,4 @@
-﻿namespace ReservaSala.Api.Models
+﻿namespace ReservaSala.Core
 {
    public class Developer
     {

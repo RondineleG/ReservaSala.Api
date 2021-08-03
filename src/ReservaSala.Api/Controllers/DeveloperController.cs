@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ReservaSala.Api.Data;
-using ReservaSala.Api.Models;
+using ReservaSala.Core;
 using System.Threading.Tasks;
 
 namespace ReservaSala.Api.Controllers
