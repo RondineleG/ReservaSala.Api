@@ -3,7 +3,9 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
-COPY . .
+
+COPY . ./
+
 RUN dotnet restore 
 RUN dotnet build --no-restore -c Release -o /app
 
