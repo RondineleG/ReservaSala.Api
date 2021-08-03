@@ -7,6 +7,7 @@ WORKDIR /src
 COPY . ./
 
 RUN dotnet restore 
+
 RUN dotnet build --no-restore -c Release -o /app
 
 FROM build AS publish
