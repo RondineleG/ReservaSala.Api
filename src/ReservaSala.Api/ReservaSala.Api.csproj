@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ReservaSala.Core\ReservaSala.Core.csproj">
-      <EmbedInteropTypes>true</EmbedInteropTypes>
+      <Private>true</Private>
     </ProjectReference>
   </ItemGroup>
 
