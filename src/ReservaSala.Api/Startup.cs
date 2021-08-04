@@ -15,6 +15,7 @@ using ReservaSala.Api.Models;
 using ReservaSala.Api.Persistence.Repositories;
 using ReservaSala.Api.Repositories;
 using ReservaSala.Api.Services;
+using Swashbuckle.AspNetCore.SwaggerUI;
 using System;
 
 namespace ReservaSala.Api
@@ -53,18 +54,42 @@ namespace ReservaSala.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "ToDo API",
+                    Description = "A simple example ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "My Name",
+                        Email = string.Empty,
+                        Url = new Uri("https://example.com/twitter"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under MIT",
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WeatherAPI v1"));            }
+
+            }
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+                c.DocumentTitle = "Todo APIs";
+                c.DocExpansion(DocExpansion.None);
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseHttpsRedirection();
 
