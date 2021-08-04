@@ -16,6 +16,8 @@ using ReservaSala.Api.Persistence.Repositories;
 using ReservaSala.Api.Repositories;
 using ReservaSala.Api.Services;
 using System;
+using System.IO;
+using System.Reflection;
 
 namespace ReservaSala.Api
 {
@@ -55,6 +57,27 @@ namespace ReservaSala.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPi", Version = "v1" });
             });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "WebAPi",
+                    Description = "Um exemplo de ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://reservasalaapi.herokuapp.com/"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = @"GitHub Repository",
+                        Email = string.Empty,
+                        Url = new Uri("https://github.com/RondineleG/ReservaSala.Api")
+                    }
+                });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath, true);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,8 +87,16 @@ namespace ReservaSala.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WeatherAPI v1"));
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1");
+                    c.DocumentTitle = "Todo APIs";
+                    c.DefaultModelsExpandDepth(0);
+                    c.RoutePrefix = string.Empty;
+                });
             }
+
+        
 
             app.UseHttpsRedirection();
 
