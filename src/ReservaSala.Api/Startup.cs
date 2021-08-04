@@ -86,7 +86,7 @@ namespace ReservaSala.Api
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-                c.DocumentTitle = "Todo APIs";
+                c.DocumentTitle = "WebAPI";
                 c.DocExpansion(DocExpansion.None);
                 c.RoutePrefix = string.Empty;
             });
