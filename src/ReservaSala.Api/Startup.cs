@@ -57,19 +57,19 @@ namespace ReservaSala.Api
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "ToDo API",
-                    Description = "A simple example ASP.NET Core Web API",
-                    TermsOfService = new Uri("https://example.com/terms"),
+                    Title = "WebAPI",
+                    Description = "Um exemplo de ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://github.com/RondineleG/ReservaSala.Api/blob/master/README.md"),
                     Contact = new OpenApiContact
                     {
-                        Name = "My Name",
-                        Email = string.Empty,
-                        Url = new Uri("https://example.com/twitter"),
+                        Name = "WebAPI",
+                        Email = "rondineleg@gmail.com",
+                        Url = new Uri("https://github.com/rondineleg"),
                     },
                     License = new OpenApiLicense
                     {
-                        Name = "Use under MIT",
-                        Url = new Uri("https://example.com/license"),
+                        Name = "MIT",
+                        Url = new Uri("https://github.com/RondineleG/ReservaSala.Api/blob/master/LICENSE"),
                     }
                 });
             });
