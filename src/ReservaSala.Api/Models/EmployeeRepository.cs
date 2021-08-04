@@ -22,7 +22,7 @@ namespace ReservaSala.Api.Models
         public async Task<Employee> Get(int id)
         {
             return await appDbContext.Employees
-                .Include(x=>x.Department)
+                .Include(x => x.Department)
                 .FirstOrDefaultAsync(x => x.EmployeeId == id);
         }
 
@@ -71,10 +71,10 @@ namespace ReservaSala.Api.Models
 
         public async Task<Employee> GetByEmail(string email)
         {
-            return await appDbContext.Employees.FirstOrDefaultAsync(x=>x.Email == email);
-            
+            return await appDbContext.Employees.FirstOrDefaultAsync(x => x.Email == email);
+
         }
-                
+
 
         public async Task<IEnumerable<Employee>> Search(string name, Gender? gender)
         {

@@ -1,7 +1,7 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using ReservaSala.Api.Domain.Models;
 using ReservaSala.Api.Domain.Services.Communication;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ReservaSala.Api.Domain.Services
 {

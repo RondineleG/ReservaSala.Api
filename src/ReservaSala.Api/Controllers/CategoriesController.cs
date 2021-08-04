@@ -1,11 +1,11 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ReservaSala.Api.Domain.Models;
 using ReservaSala.Api.Domain.Services;
 using ReservaSala.Api.Extensions;
 using ReservaSala.Api.Resources;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ReservaSala.Api.Controllers
 {
@@ -67,7 +67,7 @@ namespace ReservaSala.Api.Controllers
         {
             var result = await _categoryService.DeleteAsync(id);
 
-             if (!result.Success)
+            if (!result.Success)
                 return BadRequest(result.Message);
 
             var categoryResource = _mapper.Map<Category, CategoryResource>(result.Category);

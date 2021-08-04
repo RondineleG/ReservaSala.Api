@@ -1,5 +1,5 @@
-﻿using ReservaSala.Api.Data;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using ReservaSala.Api.Data;
 using ReservaSala.Api.Models;
 using System.Collections.Generic;
 
@@ -27,7 +27,7 @@ namespace ReservaSala.Api.Controllers
 
         // POST api/<controller>
         [HttpPost("create")]
-        public void Post([FromBody]Recipe recipe)
+        public void Post([FromBody] Recipe recipe)
         {
             if (ModelState.IsValid)
                 dbOpereations.AddRecipe(recipe);
@@ -35,7 +35,7 @@ namespace ReservaSala.Api.Controllers
 
         // PUT api/<controller>/5
         [HttpPut("edit")]
-        public void Put([FromBody]Recipe recipe)
+        public void Put([FromBody] Recipe recipe)
         {
             if (ModelState.IsValid)
                 dbOpereations.UpdateRecipe(recipe);

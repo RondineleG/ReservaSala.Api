@@ -15,7 +15,7 @@ namespace ReservaSala.Api.Resources
         [Required]
         [Range(1, 5)]
         public int UnitOfMeasurement { get; set; } // AutoMapper is going to cast it to the respective enum value
-        
+
         [Required]
         public int CategoryId { get; set; }
     }

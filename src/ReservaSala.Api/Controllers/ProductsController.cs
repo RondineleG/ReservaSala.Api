@@ -1,11 +1,11 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ReservaSala.Api.Domain.Models;
 using ReservaSala.Api.Domain.Services;
 using ReservaSala.Api.Extensions;
 using ReservaSala.Api.Resources;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ReservaSala.Api.Controllers
 {

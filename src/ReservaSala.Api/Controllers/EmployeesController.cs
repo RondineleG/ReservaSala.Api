@@ -91,18 +91,18 @@ namespace ReservaSala.Api.Controllers
         {
             try
             {
-              
+
 
                 var employeeToUpdate = await employeeRepository.Get(employee.EmployeeId);
 
-                if(employeeToUpdate == null)
+                if (employeeToUpdate == null)
                 {
                     return NotFound($"Employee with Id = {employee.EmployeeId} not found");
                 }
 
                 return await employeeRepository.Update(employee);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
                "Error updating data : " + exception.Message);
@@ -144,7 +144,7 @@ namespace ReservaSala.Api.Controllers
                 }
 
                 return NotFound();
-            } 
+            }
             catch (Exception exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,

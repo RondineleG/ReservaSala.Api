@@ -1,6 +1,6 @@
 ﻿namespace ReservaSala.Api.Models
 {
-   public class Developer
+    public class Developer
     {
         public int Id { get; set; }
 

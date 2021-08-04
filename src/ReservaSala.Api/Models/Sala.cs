@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ReservaSala.Api.Models
 {
@@ -19,4 +18,3 @@ namespace ReservaSala.Api.Models
     }
 }
 
-                                         

@@ -10,7 +10,7 @@ namespace ReservaSala.Api.Persistence.Repositories
 
         public UnitOfWork(AppDbContext context)
         {
-            _context = context;     
+            _context = context;
         }
 
         public async Task CompleteAsync()

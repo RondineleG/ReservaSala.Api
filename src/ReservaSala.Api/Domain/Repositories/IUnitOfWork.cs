@@ -4,6 +4,6 @@ namespace ReservaSala.Api.Domain.Repositories
 {
     public interface IUnitOfWork
     {
-         Task CompleteAsync();
+        Task CompleteAsync();
     }
 }

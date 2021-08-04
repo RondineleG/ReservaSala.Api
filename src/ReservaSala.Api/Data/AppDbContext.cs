@@ -16,11 +16,11 @@ namespace ReservaSala.Api.Data
         public DbSet<Bloco> Bloco { get; set; }
         public DbSet<Reserva> Reserva { get; set; }
 
-        public  DbSet<Recipe> Recipe { get; set; }
+        public DbSet<Recipe> Recipe { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-             
+
         }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
@@ -28,7 +28,7 @@ namespace ReservaSala.Api.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            
+
             builder.Entity<Category>().ToTable("Categories");
             builder.Entity<Category>().HasKey(p => p.Id);
             builder.Entity<Category>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();

@@ -1,6 +1,6 @@
+using ReservaSala.Api.Domain.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ReservaSala.Api.Domain.Models;
 
 namespace ReservaSala.Api.Domain.Repositories
 {

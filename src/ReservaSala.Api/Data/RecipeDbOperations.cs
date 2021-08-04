@@ -17,7 +17,7 @@ namespace ReservaSala.Api.Data
             {
                 return rc.Recipe.ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return rc.Recipe.ToList();
             }

@@ -14,13 +14,13 @@ namespace ReservaSala.Api.Controllers
         {
             _categoryService = categoryService;
         }
-        
+
         [HttpGet]
-        public async Task<IEnumerable<Category>>GetAllAsync()
+        public async Task<IEnumerable<Category>> GetAllAsync()
         {
             var catergories = await _categoryService.ListAsync();
             return catergories;
         }
-         
+
     }
 }
