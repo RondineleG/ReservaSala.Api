@@ -53,7 +53,7 @@ namespace ReservaSala.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPi", Version = "v1" });
             });
         }
 
